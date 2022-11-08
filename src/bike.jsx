@@ -8,10 +8,10 @@ import { format } from "date-fns";
 
 export default function Bike(props) {
   const [name, setName] = useState("");
- const [date,setDate] = useState[{
-  sDate: "",
-  endD: ""
- }]
+//  const [date,setDate] = useState[{
+//   sDate: "",
+//   endD: ""
+//  }]
   
   function handleClick(){
     if(!name){
@@ -20,14 +20,14 @@ export default function Bike(props) {
 
   }
 
-  //  const[show,SetShow] = useState(false);
+   const[show,SetShow] = useState(false);
 
-  //  function handleShow()
-  //  {
+   function handleShow()
+   {
 
-  //   SetShow(!show);
+    SetShow(!show);
 
-  //  }
+   }
 
   return (
     <div>
@@ -42,7 +42,7 @@ export default function Bike(props) {
        <input class="search_from_to_cases" type="text" value="To"/>
        <CalendarMonthIcon onClick={handleShow}/> */}
        
-        <label htmlFor="sDate">Start Date</label>
+        {/* <label htmlFor="sDate">Start Date</label>
         <input
           type="date"
           onChange={e => setDate({ sDate: e.target.value })}
@@ -57,7 +57,7 @@ export default function Bike(props) {
             />
           </React.Fragment>
         )}
-       
+        */}
        
        <CalendarS data="From"/>
        <CalendarS data="To" />
