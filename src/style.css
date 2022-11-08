@@ -1,0 +1,32 @@
+
+  .cal {
+    height: 220px;
+    width: 400px;
+    position: absolute;
+    z-index: 1;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSI6AnRPpZkz31A7Zf53ns6PhbUq2_7fsqA9g&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .dropdown-menu {
+    height: 200px;
+    overflow-y: scroll;
+  }
+  .hide {
+    opacity: 0;
+  }
+  .show {
+    opacity: 1;
+    cursor: pointer;
+  }
+  #dropdown-item-button {
+    cursor: context-menu;
+    height: 30px;
+    position: relative;
+    top: 5px;
+  }
+  .row {
+    padding: 1px 0px 1px;
+  }
+  

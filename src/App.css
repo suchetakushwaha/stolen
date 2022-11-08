@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+.App{
+  background: burlywood;
+}
+.header_text{
+  font-family: montserrat,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #0f466b;
+text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.stolen{
+  display: block;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.discription{
+  width: 300px;
+  padding: 5px;
+  margin-right: 5px;
+}
+.search_from_to_cases{
+  padding: 5px;
+  width: 100px;
+}
+.stolen-bike{
+  background: #f2f2f2;
+  max-width: 1140px;
+  width: 100%;
+  margin: auto;
+  margin-top: 40px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.byke_info_image{
+  width: 200px;
+  height: 200px;
+}
+.byke_info{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: absolute;
+    top: 5px;
+    left: 222px;
+}
+.bike_loc{
+  display: flex;
+  flex-direction: column;
+  
+}
+.calender{
+  max-width: 1140px;
+  width: 10%;
+  margin: auto;
+
+}
+.Page_info{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
