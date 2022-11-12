@@ -4,6 +4,7 @@ import Bike from './bike';
 import StolenBike from './stolen-bike-info';
 import cycle from './cycle.jpeg';
 import Paginate from './paginate';
+import { useState } from 'react';
 
 
 function App() {
@@ -71,12 +72,15 @@ function App() {
 
 
 ]
+const[bikdata,setbikeData] =useState();
+
+
   return (
     <div className="App">
-      <Bike/>
+      <Bike setbikeData={setbikeData}/>
        {description.map((e)=>{
         return(
-      <StolenBike title = {e.title} serial={e.serial} pcolor={e.PrimaryColors} stolen={e.stolendate} location={e.Location} image2 ={cycle}/>);}
+      <StolenBike bikdata={bikdata}  title = {e.title} serial={e.serial} pcolor={e.PrimaryColors} stolen={e.stolendate} location={e.Location} image2 ={cycle}/>);}
      )}
      <Paginate/>
       </div>

@@ -9,6 +9,9 @@
   color: #0f466b;
 text-align: center;
 }
+.ds{
+  display: flex;
+}
 
 .stolen{
   display: block;

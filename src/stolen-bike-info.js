@@ -1,6 +1,10 @@
 import React from 'react'
 
 function StolenBike(props) {
+  
+  if(props.bikdata != null) {
+  console.log(props.bikdata);
+  }
   return (
     <div>
        <div className='stolen-bike'>

@@ -7,27 +7,35 @@ import CalendarS from './calender2';
 import { format } from "date-fns";
 
 export default function Bike(props) {
+  const[result,setResult] =useState()
   const [name, setName] = useState("");
-//  const [date,setDate] = useState[{
-//   sDate: "",
-//   endD: ""
-//  }]
+ const [sdate,setsDate] = useState("");
+ const [edate,seteDate] = useState("");
+ console.log(sdate);
+ console.log(edate);
+
+
   
   function handleClick(){
-    if(!name){
-      return "name is required";
+    if(!name || ! sdate || !edate){
+    console.log("required");
     }
 
+    fetch('https://bikeindex.org/api/v3/search')
+    .then(response => response.json())
+    .then(result =>(props.setbikeData(result)));
+ 
   }
+   
 
-   const[show,SetShow] = useState(false);
+  //  const[show,SetShow] = useState(false);
 
-   function handleShow()
-   {
+  //  function handleShow()
+  //  {
 
-    SetShow(!show);
+  //   SetShow(!show);
 
-   }
+  //  }
 
   return (
     <div>
@@ -42,29 +50,31 @@ export default function Bike(props) {
        <input class="search_from_to_cases" type="text" value="To"/>
        <CalendarMonthIcon onClick={handleShow}/> */}
        
-        {/* <label htmlFor="sDate">Start Date</label>
+        <label htmlFor="sDate">From:</label>
         <input
-          type="date"
-          onChange={e => setDate({ sDate: e.target.value })}
+        className='discription'
+          type="date" name = "date"
+          onChange={e => setsDate(e.target.value)}
         />
         {(
           <React.Fragment>
-            <label htmlFor="sDate">End Date:</label>
-            <input
+            <label htmlFor="sDate">To:</label>
+            <input className='discription'
               type="date"
-              min={format(sDate, "YYYY-MM-DD")}
-              onChange={e => setDate({ endD: e.target.value })}
+              min={sdate}
+              onChange={e => seteDate(e.target.value)}
             />
           </React.Fragment>
         )}
-        */}
        
+{/*        
        <CalendarS data="From"/>
-       <CalendarS data="To" />
+       <CalendarS data="To" /> */}
+      
        <Button variant="contained" onClick={handleClick}>Find Cases</Button>
        </form>
-      {show ? <Calender/>:""}
-     
+      {/* {show ? <Calender/>:""}
+      */}
     </div>
   )
 }
